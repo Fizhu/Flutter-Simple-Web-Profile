@@ -5,7 +5,7 @@ import 'package:profile_web/utils/app_assets.dart';
 import 'package:profile_web/utils/dimens.dart';
 
 class Profile extends StatefulWidget {
-  const Profile({Key? key) : super(key: key);
+  const Profile({Key? key}) : super(key: key);
 
   @override
   _ProfileState createState() => _ProfileState();
