@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:profile_web/ui/profile/profile.dart';
 
+import 'data/raw/dummy_data.dart';
+
 void main() {
   runApp(const MyApp());
 }
