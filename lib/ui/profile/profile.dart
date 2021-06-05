@@ -17,6 +17,7 @@ class Profile extends StatefulWidget {
 
 class _ProfileState extends State<Profile> {
   _mainContent() => Container(
+    alignment: Alignment.center,
         margin: EdgeInsets.all(SizeConfig.width(Dimens.margin128)),
         child: Stack(children: [
           Card(
