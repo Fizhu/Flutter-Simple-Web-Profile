@@ -13,12 +13,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Hafizh Anbiya',
+      title: 'M. Hafizh Anbiya\'s Profile',
       theme: ThemeData(
         brightness: Brightness.dark,
         primarySwatch: Colors.blue,
       ),
-      home: const Profile(),
+      home: Profile(DummyData.getDataUser()),
     );
   }
 }

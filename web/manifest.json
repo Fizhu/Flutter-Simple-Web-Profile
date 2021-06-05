@@ -1,6 +1,6 @@
 {
-    "name": "profile_web",
-    "short_name": "profile_web",
+    "name": "M. Hafizh Anbiya's Profile",
+    "short_name": "M. Hafizh Anbiya's Profile",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
