@@ -16,10 +16,10 @@ class Profile extends StatefulWidget {
 
 class _ProfileState extends State<Profile> {
   _mainContent() => Container(
-        margin: const EdgeInsets.all(Dimens.margin256),
+        margin: EdgeInsets.all(Dimens.margin256),
         child: Stack(children: [
           Card(
-            margin: const EdgeInsets.fromLTRB(0.0, Dimens.margin128, 0.0, 0.0),
+            margin: EdgeInsets.fromLTRB(0.0, Dimens.margin128, 0.0, 0.0),
             elevation: 8.0,
             color: Colors.blueGrey[900],
             shape: RoundedRectangleBorder(
@@ -29,7 +29,7 @@ class _ProfileState extends State<Profile> {
               height: Sizes.matchParentHeight(context),
               child: Padding(
                 padding: EdgeInsets.fromLTRB(
-                    (Dimens.margin64 + (Sizes.matchParentWidth(context) / 6)),
+                    (Dimens.margin64 + (Sizes.matchParentWidth(context) / 6).w),
                     Dimens.margin64,
                     Dimens.margin64,
                     Dimens.margin64),
@@ -37,7 +37,7 @@ class _ProfileState extends State<Profile> {
                   children: [
                     Text(
                       widget.user.name,
-                      style: const TextStyle(fontSize: Dimens.font48),
+                      style: TextStyle(fontSize: Dimens.font48),
                     ),
                   ],
                 ),
@@ -49,8 +49,8 @@ class _ProfileState extends State<Profile> {
             left: 0.0,
             child: Container(
               width: Sizes.matchParentWidth(context) / 6,
-              margin: const EdgeInsets.fromLTRB(
-                  Dimens.margin64, 0, 0, Dimens.margin64),
+              margin:
+                  EdgeInsets.fromLTRB(Dimens.margin64, 0, 0, Dimens.margin64),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(16.0),
                 child: Image.asset(
@@ -61,8 +61,6 @@ class _ProfileState extends State<Profile> {
           ),
         ]),
       );
-
-  _mainContentMedium() => Container();
 
   @override
   Widget build(BuildContext context) {
