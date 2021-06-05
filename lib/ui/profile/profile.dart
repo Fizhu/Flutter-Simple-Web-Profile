@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:profile_web/data/models/user.dart';
 import 'package:profile_web/utils/app_assets.dart';
 import 'package:profile_web/utils/dimens.dart';
+import 'package:profile_web/utils/size_config.dart';
 import 'package:profile_web/utils/sizes.dart';
 
 class Profile extends StatefulWidget {
@@ -16,10 +17,10 @@ class Profile extends StatefulWidget {
 
 class _ProfileState extends State<Profile> {
   _mainContent() => Container(
-        margin: EdgeInsets.all(Dimens.margin256),
+        margin: EdgeInsets.all(SizeConfig.width(Dimens.margin128)),
         child: Stack(children: [
           Card(
-            margin: EdgeInsets.fromLTRB(0.0, Dimens.margin128, 0.0, 0.0),
+            margin: EdgeInsets.fromLTRB(0.0, SizeConfig.width(Dimens.margin32), 0.0, 0.0),
             elevation: 8.0,
             color: Colors.blueGrey[900],
             shape: RoundedRectangleBorder(
@@ -29,15 +30,15 @@ class _ProfileState extends State<Profile> {
               height: Sizes.matchParentHeight(context),
               child: Padding(
                 padding: EdgeInsets.fromLTRB(
-                    (Dimens.margin64 + (Sizes.matchParentWidth(context) / 6).w),
-                    Dimens.margin64,
-                    Dimens.margin64,
-                    Dimens.margin64),
+                    (SizeConfig.width(Dimens.margin48) + (Sizes.matchParentWidth(context) / 6)),
+                    SizeConfig.width(Dimens.margin24),
+                    SizeConfig.width(Dimens.margin24),
+                    SizeConfig.width(Dimens.margin24)),
                 child: Row(
                   children: [
                     Text(
                       widget.user.name,
-                      style: TextStyle(fontSize: Dimens.font48),
+                      style: TextStyle(fontSize: SizeConfig.width(Dimens.font16)),
                     ),
                   ],
                 ),
@@ -50,9 +51,9 @@ class _ProfileState extends State<Profile> {
             child: Container(
               width: Sizes.matchParentWidth(context) / 6,
               margin:
-                  EdgeInsets.fromLTRB(Dimens.margin64, 0, 0, Dimens.margin64),
+                  EdgeInsets.fromLTRB(SizeConfig.width(Dimens.margin24), 0, 0, SizeConfig.width(Dimens.margin24)),
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(16.0),
+                borderRadius: BorderRadius.circular(8.0),
                 child: Image.asset(
                   AppAssets.imageProfile,
                 ),
@@ -64,6 +65,7 @@ class _ProfileState extends State<Profile> {
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return Scaffold(
       body: SafeArea(
         child: Stack(

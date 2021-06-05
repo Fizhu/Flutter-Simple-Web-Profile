@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:profile_web/ui/profile/profile.dart';
-import 'package:profile_web/utils/size_config.dart';
 
 import 'data/raw/dummy_data.dart';
 
@@ -13,7 +12,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SizeConfig().init(context);
     return MaterialApp(
       title: 'M. Hafizh Anbiya\'s Profile',
       theme: ThemeData(
