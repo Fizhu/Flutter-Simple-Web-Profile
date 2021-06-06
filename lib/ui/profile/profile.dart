@@ -39,7 +39,7 @@ class _ProfileState extends State<Profile> {
                   children: [
                     Text(
                       widget.user.name,
-                      style: TextStyle(fontSize: SizeConfig.width(Dimens.font16)),
+                      style: TextStyle(fontSize: SizeConfig.width(Dimens.font22)),
                     ),
                   ],
                 ),
