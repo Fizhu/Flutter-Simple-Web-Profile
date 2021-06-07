@@ -23,7 +23,7 @@ class _ProfileState extends State<Profile> {
           Card(
             margin: EdgeInsets.fromLTRB(0.0, SizeConfig.width(Dimens.margin32), 0.0, 0.0),
             elevation: 8.0,
-            color: Colors.blueGrey[900],
+            color: Colors.blueGrey[900]?.withOpacity(0.8),
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(16.0)),
             child: SizedBox(
