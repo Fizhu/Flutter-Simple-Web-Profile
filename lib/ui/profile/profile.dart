@@ -50,13 +50,15 @@ class _ProfileState extends State<Profile> {
             bottom: 0.0,
             left: 0.0,
             child: Container(
-              width: Sizes.matchParentWidth(context) / 6,
               margin:
                   EdgeInsets.fromLTRB(SizeConfig.width(Dimens.margin24), 0, 0, SizeConfig.width(Dimens.margin24)),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(8.0),
                 child: Image.asset(
                   AppAssets.imageProfile,
+                  fit: BoxFit.cover,
+                  width: Sizes.matchParentWidth(context) / 6.5,
+                  height: Sizes.matchParentHeight(context) / 2.2,
                 ),
               ),
             ),
